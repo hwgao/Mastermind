@@ -154,7 +154,7 @@ int main(int argc, char *argv[])
     array<uint32_t, PEG_SLOTS> guess{};
     uint32_t black_keys{};
     uint32_t white_keys{};
-    Mastermind game(peg_colors, tries_allowed);
+    Mastermind game{peg_colors, tries_allowed};
 
     while (game.turnsLeft() > 0) {
         cout << "Please input " << PEG_SLOTS << " numbers[0 -- " << peg_colors - 1
